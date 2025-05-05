@@ -1,0 +1,17 @@
+@import url(game_sect.css);
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(5, 5, 5);
+    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
+      radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    display: flex;
+    
+    font-family: "East Sea Dokdo";
+}

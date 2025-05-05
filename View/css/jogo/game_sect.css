@@ -1,0 +1,86 @@
+section {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(5, 5, 5);
+  background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent),
+                    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+  margin: 0vh 0vw;
+  z-index: 1;
+}
+
+#zona {
+  position: fixed;
+  top: 5vh;
+  width: 80vw;
+  height: 50vh;
+  background-color: rgba(255, 255, 255, 0.01);
+  z-index: 2;
+}
+
+#areaDeVoo {
+  position: fixed;
+  bottom: 5vh;
+  width: 80vw;
+  height: 30vh;
+  background-color: rgba(255, 255, 255, 0.01);
+  z-index: 2;
+}
+
+#nave {
+  position: absolute;
+  width: 5vw;
+  height: 6vh;
+  font-size: 2vw;
+  transform: rotate(270deg);
+}
+
+.tiro {
+  width: 0.25vw;
+  height: 5vh;
+  background-color: red;
+  z-index: 3;
+}
+
+#status {
+  position: fixed;
+  top: 5vh;
+  left: 1vw;
+  width: 10vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.txtStatus {
+  color: white;
+  font-size: 1.5vw;
+}
+
+.status {
+  height: 4vh;
+  width: 6vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 3;
+}
+
+.meteoro {
+  height: 3vw;
+  width: 3vw;
+  transform: rotate(315deg);
+  background: url('./../../../Model/meteoro.svg.svg') no-repeat center;
+  background-size: contain;
+}

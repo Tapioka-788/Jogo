@@ -1,0 +1,39 @@
+section{
+    width: 100vw;
+    height: 100vh;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(5, 5, 5);
+    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
+      radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+
+      z-index: 1;
+  }
+
+  #entrar{
+    width: 10vw;
+    height: 6vh;
+
+    border-radius: 1vw;
+    border: none;
+
+    position: fixed;
+    top: 55vh;
+    left: 45vw;
+    z-index: 2;
+
+    font-size: 1.4vh;
+  }
+
+  #entrar:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
