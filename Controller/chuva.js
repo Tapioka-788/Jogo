@@ -1,6 +1,6 @@
 const zona = document.getElementById('zona');
 
-function criarMeteoro() {
+export function criarMeteoro() {
     const meteoro = document.createElement('div');
     meteoro.classList.add('meteoro');
     meteoro.style.position = 'absolute';
@@ -30,9 +30,3 @@ function criarMeteoro() {
 
 // Gera 1 meteoro automaticamente a cada segundo
 setInterval(criarMeteoro, 2000);
-
-document.addEventListener('keydown', (event) => {
-    if (event.key.toLowerCase() === 'q') {
-        criarMeteoro();
-    }
-});

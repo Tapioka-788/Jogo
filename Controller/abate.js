@@ -1,19 +1,26 @@
-let abates = 0;
+export let abates = 0;
 const abatesElemento = document.getElementById('abates');
+const resultadoElemento = document.getElementById('resultado');
 
 if (!abatesElemento) {
     console.error("Elemento #abates não encontrado no DOM.");
 }
 
-function atualizarAbates() {
+export function atualizarAbates() {
     abates++;
-    
-    if (abatesElemento) {
-        abatesElemento.innerHTML = `<h1 class="txtStatus">Abates: ${abates}</h1>`;
+    abatesElemento.innerHTML = `<h1 class="txtStatus">Abates: ${abates / 2}</h1>`;
+
+    // Atualiza o espaço do resultado quando o jogo termina
+    if (resultadoElemento) {
+        resultadoElemento.innerHTML = `<p>Total de Abates: ${abates / 2}</p>`;
     }
 }
 
-function detectarColisaoLaserMeteoro() {
+export function getAbates() {
+    return abates;
+}
+
+export function detectarColisaoLaserMeteoro() {
     const tiros = document.querySelectorAll('.tiro');
     const meteoros = document.querySelectorAll('.meteoro');
 
@@ -32,14 +39,15 @@ function detectarColisaoLaserMeteoro() {
                 setTimeout(() => {
                     meteoro.remove();
                     tiro.remove();
-                    atualizarAbates();
                 }, 0);
+
+                atualizarAbates();
             }
         });
     });
 }
 
-function gameLoopAbates() {
+export function gameLoopAbates() {
     detectarColisaoLaserMeteoro();
     requestAnimationFrame(gameLoopAbates);
 }

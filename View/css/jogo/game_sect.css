@@ -38,8 +38,8 @@ canvas {
 
 #nave {
   position: absolute;
-  width: 5vw;
-  height: 6vh;
+  width: 3vw;
+  height: 5vh;
   font-size: 2vw;
   transform: rotate(270deg);
 }
@@ -83,4 +83,56 @@ canvas {
   transform: rotate(315deg);
   background: url('./../../../Model/meteoro.svg.svg') no-repeat center;
   background-size: contain;
+}
+
+#gameOver{
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(50, 5, 5, 0.1);
+
+  z-index: 10;
+  position: absolute;
+  left: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#acabou{
+  width: 30vw;
+  height: 40vh;
+
+  background-color: rgba(230, 230, 230, 1);
+
+  border-radius: 2vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#btnEnd{
+  width: 25vw;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#end{
+  font-size: 2vw;
+}
+
+.btn{
+  width: 8vw;
+  height: 5vh;
+
+  border-radius: 2vw;
+}
+
+.btn:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }

@@ -1,5 +1,5 @@
 let vida = 2;
-const vidaElemento = document.getElementById('vida');
+const vidaElemento = document.getElementById("vida");
 
 if (!vidaElemento) {
     console.error("Elemento #vida não encontrado no DOM.");
@@ -21,7 +21,7 @@ const svgSecundario = `
 // Inicializa os corações na tela
 vidaElemento.innerHTML = svgInicial + svgInicial;
 
-function atualizarVida() {
+export function atualizarVida() {
     if (vida > 0) {
         vida--;
 
@@ -31,15 +31,15 @@ function atualizarVida() {
             coracoes[vida].outerHTML = svgSecundario;
         }
 
-        // Se vida for 0, exibe alerta de Game Over
+        // Se vida for 0, dispara o evento para o arquivo externo
         if (vida === 0) {
-            alert("Game Over! Você perdeu todas as vidas.");
+            window.dispatchEvent(new Event("vidaZerada"));
         }
     }
 }
 
-function detectarColisaoMeteoroNave() {
-    const meteoros = document.querySelectorAll('.meteoro');
+export function detectarColisaoMeteoroNave() {
+    const meteoros = document.querySelectorAll(".meteoro");
     const naveRect = nave.getBoundingClientRect();
 
     meteoros.forEach((meteoro) => {
@@ -51,16 +51,18 @@ function detectarColisaoMeteoroNave() {
             meteoroRect.top < naveRect.bottom &&
             meteoroRect.bottom > naveRect.top
         ) {
-            console.log('Você foi atingido!');
+            console.log("Você foi atingido!");
             meteoro.remove();
             atualizarVida();
         }
     });
 }
 
-function gameLoopVidas() {
+export function gameLoopVidas() {
     detectarColisaoMeteoroNave();
     requestAnimationFrame(gameLoopVidas);
 }
 
 requestAnimationFrame(gameLoopVidas);
+
+

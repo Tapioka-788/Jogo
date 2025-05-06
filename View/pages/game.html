@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="./../css/jogo/game_link.css">
+
+    <script type="module" src="./../../Controller/movTela.js" defer></script>
+    <script src="./../../Controller/restartGame.js" defer></script>
     <script src="./../../Controller/controle.js" defer></script>
-    <script src="./../../Controller/chuva.js" defer></script>
-    <script src="./../../Controller/abate.js" defer></script>
-    <script src="./../../Controller/vida.js" defer></script>
+    <script type="module" src="./../../Controller/game.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 </svg>
             </div>
             <div id="municao" class="status">
-                <h1 class="txtStatus">      </h1>
+                <h1 class="txtStatus"> </h1>
                 <!-- <h1 class="txtStatus">Municao</h1> -->
             </div>
             <div id="abates" class="status">
@@ -50,10 +51,26 @@
                 </svg>
             </div>
         </div>
-        </section1>
+    </section>
+
+    <section id="gameOver">
+        <div id="acabou">
+            <h1 id="end">Game Over !</h1>
+            <h1 id="resultado"></h1>
+            <div id="btnEnd">
+                <button onclick="window.location.href='./game.html'" class="btn">
+                    <h1>RESTART</h1>
+                </button>
+                <button onclick="window.location.href='./index.html'" class="btn" >
+                    <h1>HOME</h1>
+                </button>
+            </div>
+        </div>
+
+    </section>
 
 
-        <script src="./../../Controller/bggame.js"></script>
+    <script src="./../../Controller/bggame.js"></script>
 </body>
 
 </html>
