@@ -1,22 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function exibirGameOver() {
     const gameOverSection = document.getElementById("gameOver");
 
     if (!gameOverSection) {
         console.error("Elemento #gameOver não encontrado no DOM.");
         return;
-    }
-
-    // Estiliza a tela de Game Over inicialmente
+    } else{
     gameOverSection.style.position = "absolute";
     gameOverSection.style.top = "50%";
-    gameOverSection.style.left = "100vw"; // Inicialmente fora da tela
+    gameOverSection.style.left = "100vw";
     gameOverSection.style.transform = "translateY(-50%)";
 
-    function exibirGameOver() {
-        gameOverSection.style.left = "0vw"; // Move para dentro da tela
+    gameOverSection.style.left = "-100vw"; 
     }
+}
 
-    // Ouve o evento disparado pelo arquivo de vida
-    window.addEventListener("vidaZerada", exibirGameOver);
-});
+window.addEventListener("vidaZerada", exibirGameOver);
+
+let gameOver = document.getElementById('gameOver')
+let telinhas = document.getElementById('telinhas')
+
+gameOver.appendChild(telinhas)
+
+export function trocarTela(numeroTelinha){
+    telinhas.style.left = '-' + numeroTelinha + '00vw';
+}
+
 

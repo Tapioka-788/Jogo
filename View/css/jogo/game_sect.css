@@ -89,50 +89,82 @@ canvas {
   width: 100vw;
   height: 100vh;
 
-  background-color: rgba(50, 5, 5, 0.1);
+  z-index: 100;
 
-  z-index: 10;
-  position: absolute;
-  left: 100vw;
+  input{
+    width: 25vw;
+    height: 3vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    padding-left: 1vw;
+    margin: 1vh;
 
-#acabou{
-  width: 30vw;
-  height: 40vh;
+    border-radius: 1vw;
+    background-color: rgb(180, 180, 180);
+  }
+  
+  #telinhas{
+    width: 200vw;
+    height: 100vh;
 
-  background-color: rgba(230, 230, 230, 1);
+    display: flex;
+    position: absolute;
+    left: 100vw;
 
-  border-radius: 2vw;
+    .sect{
+      width: 100vw;
+      height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-#btnEnd{
-  width: 25vw;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
 
-  display: flex;
-  justify-content: space-evenly;
-}
+    .boxEnd{
+      width: 50vw;
+      height: 40vh;
 
-#end{
-  font-size: 2vw;
-}
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-.btn{
-  width: 8vw;
-  height: 5vh;
+      background-color: white;
+      border-radius: 2vw;
 
-  border-radius: 2vw;
-}
+      #btnEnd{
+        width: 40vw;
+        display: flex;
+        justify-content: space-evenly;
 
-.btn:hover{
-  transform: scale(1.1);
-  cursor: pointer;
+        .btn{
+          width: 10vw;
+          height: 5vh;
+
+          border-radius: 2vw;
+          background-color: rgb(40, 40, 40);
+          color: white;
+
+          text-align: center;
+        }
+      }
+      #btnSave{
+        width: 40vw;
+        display: flex;
+        justify-content: space-evenly;
+
+        .btn{
+          width: 10vw;
+          height: 5vh;
+
+          border-radius: 2vw;
+          background-color: rgb(40, 40, 40);
+          color: white;
+
+          text-align: center;
+        }
+      }
+    }
+  }
 }

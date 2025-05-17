@@ -54,21 +54,41 @@
     </section>
 
     <section id="gameOver">
-        <div id="acabou">
-            <h1 id="end">Game Over !</h1>
-            <h1 id="resultado"></h1>
-            <div id="btnEnd">
-                <button onclick="window.location.href='./game.html'" class="btn">
-                    <h1>RESTART</h1>
-                </button>
-                <button onclick="window.location.href='./index.html'" class="btn" >
-                    <h1>HOME</h1>
-                </button>
+        <nav id="telinhas">
+            <div id="end" class="sect">
+                <div id="acabou" class="boxEnd">
+                    <h1 id="end">Game Over !</h1>
+                    <h1 id="resultado"></h1>
+                    <div id="btnEnd">
+                        <button onclick="window.location.href='./game.html'" class="btn">
+                            <h1>RESTART</h1>
+                        </button>
+                        <button onclick="window.location.href='./index.html'" class="btn" >
+                            <h1>HOME</h1>
+                        </button>
+                        <button class="btn" onclick="trocarTela(0)">
+                            <h1>SAVE</h1>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-
+            <div id="save" class="sect">
+                <div id="saveBox" class="boxEnd">
+                    <h1 id="saveTxt">Save your Progress !</h1>
+                    <h1 id="resultado"></h1>
+                    <input id="nomeInput" type="text" placeholder="Insiria seu nome!">
+                    <div id="btnSave">
+                        <button class="btn" onclick="trocarTela(1)">
+                            <h1>CANCEL</h1>
+                        </button>
+                        <button class="btn" onclick="trocarTela(1)">
+                            <h1>SAVE</h1>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </section>
-
 
     <script src="./../../Controller/bggame.js"></script>
 </body>
